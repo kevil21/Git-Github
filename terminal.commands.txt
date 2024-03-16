@@ -1,0 +1,20 @@
+
+pwd : print working directory
+
+mkdir : make/create directory(folder)
+    mkdir "test"  #Create a directory of name "test"
+
+cd : change the directory
+    cd Desktop/Coding 
+    cd ..   #Parent directory (move to previous directory)
+
+rmdir : remove the directory
+    rmdir "test"  #Remove the directory of name "test"
+
+ls : list status (files in current directory)
+    ls -a  #List status including hidden files
+
+mv : move or rename files
+    mv "random" "Random" #Renames random to Random
+    mv "Random" Basics/  #Move "Random" file into the directory Basics/
+    mv "Random" ..  #Move "Random" file into the previous directory

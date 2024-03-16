@@ -1,0 +1,34 @@
+git : version control of documentation
+
+
+------------------------------< Setting Up Git >------------------------------ 
+git --version  # installed version in the system
+
+# Set user name and email
+ git config --global user.name "User Name"
+ git config --global user.email "User Email"
+ git config --global --edit  #cofigure everything in a txt format
+    i : insert mode
+    esc : escape from the mode
+    :wq : save and quit 
+
+
+------------------------------< initalizing Git >------------------------------
+git init : initalize a empty Git repository at current working directory
+
+
+------------------------------< Adding/Updating >------------------------------
+
+git status : status of the current Git repository modifications, updates....
+
+
+            |--working directory            # Current working folder
+            |
+        git add                             # Start tracking changes in file / Move the file into staging area
+            |----->staging area--|          # Hold the changes made in the file
+                                 |
+                              git commit    # Fix the changes in file / Move the file from staging area to repository
+               repository<-------|          # Storage of the final version of the file
+
+
+git add <file> : start tracking the file / update the changes made in the file  
