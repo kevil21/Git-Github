@@ -37,4 +37,5 @@ git commit -m "Message of commit"     # Commit/Finalise the changes made in the 
                                       # Each commit has its unique hash code which can be use to identify/find the commit
                                       # -m is used to write a message about the commit
 git log           # Shows all the previous commits with details like Author,Date...
-git checkout <commit hash code/branch name>
+git checkout <commit hash code/branch name>  # Selects the commit using hash or jump to branch
+    git checkout master  # Return to the latest commit 
