@@ -46,7 +46,6 @@ git commit -m "Message of commit"     # Commit/Finalise the changes made in the 
                                       # Each commit has its unique hash code which can be use to identify/find the commit
                                       # -m is used to write a message about the commit
 
-
 ------------------------------< Branching >------------------------------ 
 MASTER # Main branch for version control
     DEV # Branch for developing and testing
