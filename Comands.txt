@@ -1,0 +1,86 @@
+Notes:  : explanation of the part written before semicolon
+        # : Comment
+        <name> : name is written as it is without "" or ''
+        "name" : name is written in ""
+           
+
+
+------------------------------< GIT >------------------------------ 
+
+git : version control of documentation
+.gitignore : a file containing the names of the files which are not to be tracked by git
+
+------------------------------< Setting Up Git >------------------------------ 
+git --version  # installed version in the system
+
+# Set user name and email
+ git config --global user.name "User Name"
+ git config --global user.email "User Email"
+ git config --global --edit  #cofigure everything in a txt format
+    i : insert mode
+    esc : escape from the mode
+    :wq : save and quit 
+
+
+------------------------------< initalizing Git >------------------------------
+git init : initalize a empty Git repository at current working directory
+
+
+------------------------------< Adding/Updating >------------------------------
+
+git status : status of the current Git repository modifications, updates....
+
+
+            |--working directory            # Current working folder
+            |
+        git add                             # Start tracking changes in file / Move the file into staging area
+            |----->staging area--|          # Hold the changes made in the file
+                                 |
+                              git commit    # Fix the changes in file / Move the file from staging area to repository
+               repository<-------|          # Storage of the final version of the file
+
+
+git add <file>         # Start tracking the file / update the changes made in the file  
+    git add .              # Add all the files in the current directory to the staging area
+git commit -m "Message of commit"     # Commit/Finalise the changes made in the file
+                                      # Each commit has its unique hash code which can be use to identify/find the commit
+                                      # -m is used to write a message about the commit
+
+
+------------------------------< Branching >------------------------------ 
+MASTER # Main branch for version control
+    DEV # Branch for developing and testing
+        <dev1> # Developer 1's workspace
+            # Feature Branches
+            <dev1/feature1> # Developer 1 working on feature 1
+            <dev1/feature2>
+        <dev2>
+            <dev2/feature1> # Feature branch 1
+                <feature1/part1> # Feature branch 2
+                <feature1/part2>
+            <dev2/feature3>
+    RELEASE BRANCH 
+    HotFixes
+
+
+
+git log           # Shows all the previous commits with details like Author, Date, branch, commit hash code, commit name
+git branch <branchName>  # Creates a new branch
+git checkout <commit hash code/branch name>  # Jump to desired commit using hash or change branch
+    git checkout master  # Return to the latest commit of master branch
+git checkout -b <branchName> # Creates a new branch and jump to that branch
+git merge <name>  # Merges the name branch with the current branch
+    git merge dev1/multiply  # Merges the branch dev1/multiply with the dev branch
+git diff  # Shows all the merge conflicts
+git diff <source branch> <target branch>  # Shows the differences between the branches/commits
+
+
+
+
+------------------------------< GITHUB >------------------------------ 
+git remote -v  # Shows the remote repo which is linked with the local workspace
+    git remote add <origin> <link>  # Link the remote repository with the local workspace (fetch/push)
+git branch -M master # Jump to master branch
+git push -u <origin> <master>  # Push the local master branch to the origin(github)
+
+
