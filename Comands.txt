@@ -11,7 +11,7 @@ git : version control of documentation
 .gitignore : a file containing the names of the files which are not to be tracked by git
 
 ------------------------------< Setting Up Git >------------------------------ 
-git --version  # installed version in the system
+git --version  # Installed version in the system
 
 # Set user name and email
  git config --global user.name "User Name"
@@ -81,5 +81,39 @@ git remote -v  # Shows the remote repo which is linked with the local workspace
     git remote add <origin> <link>  # Link the remote repository with the local workspace (fetch/push)
 git branch -M master # Jump to master branch
 git push -u <origin> <master>  # Push the local master branch to the origin(github)
+    git push  # Push the currench branch to the remote repository
+git pull  # Pulls the current branch from the remote repository to the local workspace
+
+------------------------------< Readme.md >------------------------------
+Normal Text
+
+# heading 1
+## heading 2
+
+_italics_
+
+**Bold**
+
+~~cut~~
+
+Links
+[Visit website] (https:// .com "hover text")
+
+Images
+![Image Name] (https:// .com "hover text")
+
+'code type syntax/highlighting'
+
+# Coding type syntax on display
+'''language name 
+    language syntax
+'''
+
+
+
+
+
+
+
 
 
