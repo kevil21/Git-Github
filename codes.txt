@@ -1,5 +1,14 @@
-git : version control of documentation
+Notes:  : explanation of the part written before semicolon
+        # : Comment
+        <name> : name is written as it is without "" or ''
+        "name" : name is written in ""
+           
 
+
+------------------------------< GIT >------------------------------ 
+
+git : version control of documentation
+.gitignore : a file containing the names of the files which are not to be tracked by git
 
 ------------------------------< Setting Up Git >------------------------------ 
 git --version  # installed version in the system
@@ -32,10 +41,43 @@ git status : status of the current Git repository modifications, updates....
 
 
 git add <file>         # Start tracking the file / update the changes made in the file  
-git add .              # Add all the files in the current directory to the staging area
+    git add .              # Add all the files in the current directory to the staging area
 git commit -m "Message of commit"     # Commit/Finalise the changes made in the file
                                       # Each commit has its unique hash code which can be use to identify/find the commit
                                       # -m is used to write a message about the commit
-git log           # Shows all the previous commits with details like Author,Date...
-git checkout <commit hash code/branch name>  # Selects the commit using hash or jump to branch
-    git checkout master  # Return to the latest commit 
+
+
+------------------------------< Branching >------------------------------ 
+MASTER # Main branch for version control
+    DEV # Branch for developing and testing
+        <dev1> # Developer 1's workspace
+            # Feature Branches
+            <dev1/feature1> # Developer 1 working on feature 1
+            <dev1/feature2>
+        <dev2>
+            <dev2/feature1> # Feature branch 1
+                <feature1/part1> # Feature branch 2
+                <feature1/part2>
+            <dev2/feature3>
+    RELEASE BRANCH 
+    HotFixes
+
+
+
+git log           # Shows all the previous commits with details like Author, Date, branch, commit hash code, commit name
+git branch <branchName>  # Creates a new branch
+git checkout <commit hash code/branch name>  # Jump to desired commit using hash or change branch
+    git checkout master  # Return to the latest commit of master branch
+git checkout -b <branchName> # Creates a new branch and jump to that branch
+git merge <name>  # Merges the name branch with the current branch
+    git merge dev1/multiply  # Merges the branch dev1/multiply with the dev branch
+git diff  # Shows all the merge conflicts
+git diff <source branch> <target branch>  # Shows the differences between the branches/commits
+
+
+
+
+------------------------------< GITHUB >------------------------------ 
+git remote -v  # Shows the remote repo which is linked with the local workspace
+    git remote add origin <link>  # Link the remote repository with the local workspace
+    
