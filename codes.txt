@@ -32,7 +32,9 @@ git status : status of the current Git repository modifications, updates....
 
 
 git add <file>         # Start tracking the file / update the changes made in the file  
+git add .              # Add all the files in the current directory to the staging area
 git commit -m "Message of commit"     # Commit/Finalise the changes made in the file
                                       # Each commit has its unique hash code which can be use to identify/find the commit
                                       # -m is used to write a message about the commit
 git log           # Shows all the previous commits with details like Author,Date...
+git checkout <commit hash code/branch name>
